@@ -82,27 +82,35 @@ class MainActivity : AppCompatActivity() {
 
         if (Time == 1) {
             default = R.drawable.sunday_view
+            default_text.setText("")
         }
         if (Time == 2) {
             default = R.drawable.monday_view
+            default_text.setText("")
         }
         if (Time == 3) {
             default = R.drawable.tuesday_view
+            default_text.setText("")
         }
         if (Time == 4) {
             default = R.drawable.wednesday_view
+            default_text.setText("")
         }
         if (Time == 5) {
             default = R.drawable.thursday_view
+            default_text.setText("")
         }
         if (Time == 6) {
             default = R.drawable.friday_view
+            default_text.setText("")
         }
         if (Time == 7) {
             default = R.drawable.saturday_view
+            default_text.setText("")
         }
         if (Time == 8) {
             default = R.drawable.duduwithmask
+            default_text.setText("체온측정 기록이 없습니다.")
             Toast.makeText(this, "입장 기록이 없습니다.", Toast.LENGTH_LONG).show()
         }
         dayImage.setImageResource(default)

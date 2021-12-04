@@ -16,6 +16,7 @@ class LogActivity : AppCompatActivity() {
         logtv2.text=intent.getStringExtra("where1")
         logtv3.text=intent.getStringExtra("where2")
         logtv4.text=intent.getStringExtra("where3")
+        logtv5.text=intent.getStringExtra("where4")
 
         Backbt.setOnClickListener(){
             finish()
