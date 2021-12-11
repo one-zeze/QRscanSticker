@@ -167,7 +167,8 @@ class MainActivity : AppCompatActivity() {
 
         if (result != null) {
             if (result.contents != null) {
-                val QRbuilding = "\n장소 :" + result.contents.toString() + "\n시간 :" + ScanTime + "\n체온 :" //+체온 데이터 입력하면됨
+                val QRresult = result.contents.toString().split("/")
+                val QRbuilding = "\n장소 :" + QRresult[0] + "\n시간 :" + ScanTime + "\n체온 :" + QRresult[1]
                 timer()
                 setImage(Time = Day)
                 saveData(Day, QRbuilding)
