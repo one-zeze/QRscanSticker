@@ -123,6 +123,7 @@ class MainActivity : AppCompatActivity() {
         val ddwhere1 = pref.getString("1QRwhere", "none")
         val ddwhere2 = pref.getString("2QRwhere", "none")
         val ddwhere3 = pref.getString("3QRwhere", "none")
+        val ddwhere4 = pref.getString("4QRwhere", "none")
         /*var count: Int = 0*/
 
         editor.putInt("today", today).apply()
@@ -135,6 +136,8 @@ class MainActivity : AppCompatActivity() {
             editor.putString("2QRwhere", QRbuilding).apply()
         else if (ddwhere3 == "none")
             editor.putString("3QRwhere", QRbuilding).apply()
+        else if (ddwhere4 == "none")
+            editor.putString("4QRwhere", QRbuilding).apply()
 
     }
 
@@ -164,8 +167,7 @@ class MainActivity : AppCompatActivity() {
 
         if (result != null) {
             if (result.contents != null) {
-
-                val QRbuilding = "\n장소 :" + result.contents.toString() + "\n시간 :" + ScanTime
+                val QRbuilding = "\n장소 :" + result.contents.toString() + "\n시간 :" + ScanTime + "\n체온 :" //+체온 데이터 입력하면됨
                 timer()
                 setImage(Time = Day)
                 saveData(Day, QRbuilding)
